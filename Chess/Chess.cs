@@ -36,8 +36,8 @@ namespace Chess
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(sc[showOnMonitor].Bounds.Left, sc[showOnMonitor].Bounds.Top);
             // If you intend the form to be maximized, change it to normal then maximized.
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
+            //this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
         }
         private void Form1_Load(object sender, EventArgs e)

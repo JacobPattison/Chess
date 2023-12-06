@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,10 +30,18 @@ namespace Chess.Pieces
                 if (game_Manager.Pieces[targetColumn, targetRow].Colour == this.Colour)
                     return false;
             }
-            if (targetColumn == this.Column + 1 || targetColumn == this.Column - 1 && targetRow == this.Row + 1 || targetRow == this.Row - 1)
-                return true;
+            if (targetColumn == this.Column + 1 || targetColumn == this.Column - 1 || targetColumn == this.Column)
+            {
+                if (targetRow == this.Row + 1 || targetRow == this.Row - 1 || targetRow == this.Row)
+                    return true;
+            }
 
             return false;
+        }
+
+        public bool CheckForCheck(int targetColumn, int targetRow, Piece[,] pieces, )
+        {
+
         }
     }
 }
